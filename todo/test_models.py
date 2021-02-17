@@ -1,16 +1,13 @@
 from django.test import TestCase
+from .models import Item
 
 
-class TestDjango(TestCase):
+class TestModels(TestCase):
 
-    def test_this_thing_work(self):
-        self.assertEqual(1,1)
+    def test_done_defaults_to_false(self):
+        item = Item.objects.create(name='Test Todo Item')
+        self.assertFalse(item.done)
 
-    def test_this_thing_work2(self):
-        self.assertEqual(1,3)
-
-    def test_this_thing_work3(self):
-        self.assertEqual(1,)
-
-    def test_this_thing_work4(self):
-        self.assertEqual(1,4)
+    def test_item_string_method_return_name(self):
+        item = Item.objects.create(name='Test Todo Item')
+        self.assertEqual(str(item), 'Test Todo Item')
