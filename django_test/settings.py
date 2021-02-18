@@ -27,7 +27,7 @@ SECRET_KEY = 'yz%v8%&r@r3*wro+&(&jxr4ry!up+rwytff_tw*hkrd6!ig6y%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [julita-django-todo-app.herokuapp.com]
+ALLOWED_HOSTS = ['julita-django-todo-app.herokuapp.com']
 
 
 # Application definition
